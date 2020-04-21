@@ -2,22 +2,12 @@ var num = [];
 var f;
 var g,h,j,k,l;
 var w = new sp();
+var lvl = document.querySelector(".level");
 var boom = document.querySelector("#boom");
 var fade = document.querySelectorAll(".fade");
 var canvas = document.querySelector(".squares");
 var hs = document.querySelectorAll(".hs");
-hs[1].textContent = localStorage.hs1;
-hs[2].textContent = localStorage.hs2;
-hs[3].textContent = localStorage.hs3;
-var lvl = document.querySelector(".level");
-hs[4].textContent = localStorage.hs4;
-hs[5].textContent = localStorage.hs5;
 var b1 = document.getElementById("b1");
-hs[7].textContent = localStorage.hs11;
-hs[8].textContent = localStorage.hs21;
-hs[9].textContent = localStorage.hs31;
-hs[10].textContent = localStorage.hs41;
-hs[11].textContent = localStorage.hs51;
 var b2 = document.getElementById("b2");
 b1.addEventListener("click", function(){
       lvl.textContent = "The Easy Level";
@@ -333,6 +323,11 @@ l=localStorage.hs51;
  	    else if (f< l) {
  	    	localStorage.hs51 = f;
  	    }
+		hs[7].textContent = localStorage.hs11;
+hs[8].textContent = localStorage.hs21;
+hs[9].textContent = localStorage.hs31;
+hs[10].textContent = localStorage.hs41;
+hs[11].textContent = localStorage.hs51;
 }
 
 function highsc(){
@@ -384,4 +379,9 @@ l=localStorage.hs5;
  	    else if (f< l) {
  	    	localStorage.hs5 = f;
  	    }
+	hs[1].textContent = localStorage.hs1;
+hs[2].textContent = localStorage.hs2;
+hs[3].textContent = localStorage.hs3;
+hs[4].textContent = localStorage.hs4;
+hs[5].textContent = localStorage.hs5;
 }
