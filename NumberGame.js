@@ -287,40 +287,51 @@ for (var i = 0; i<25 ; i++){
 			};
 		};
 	});};};
-
-
 	function highsc1(){
-	g = localStorage.hs11;
+g = localStorage.hs11;
 h = localStorage.hs21;
 j= localStorage.hs31;
 k=localStorage.hs41;
 l=localStorage.hs51;
-	if (f < g) {
- 	    	localStorage.hs21 = g;
+     if(localStorage.hs11 === undefined){
+     	localStorage.hs11 = f;
+     }
+	else if (f < g) {
  	    	localStorage.hs11 = f;
+ 	    	localStorage.hs21 = g;
  	    	localStorage.hs31 = h;
  	    	localStorage.hs41 = j;
  	    	localStorage.hs51 = k;
+ 	    }
+ 	    else if (localStorage.hs21 === undefined) {
+ 	    	localStorage.hs21 = f;
  	    }
  	    else if (f<h) {
  	    	localStorage.hs21 = f;
  	    	localStorage.hs31 = h;
  	    	localStorage.hs41 = j;
  	    	localStorage.hs51 = k;
-
+ 	    }
+ 	    else if (localStorage.hs31 === undefined) {
+ 	    	localStorage.hs31 = f;
  	    }
  	    else if (f< j){
  	    	localStorage.hs31 = f;
  	    	localStorage.hs41 = j;
  	    	localStorage.hs51 = k;
-
+ 	    }
+ 	    else if (localStorage.hs41 === undefined) {
+ 	    	localStorage.hs41 = f;
  	    }
  	    else if (f< k){
  	    	localStorage.hs41 = f;
  	    	localStorage.hs51= k;
  	    }
+ 	    else if (localStorage.hs51 === undefined) {
+ 	    	localStorage.hs51 = f;
+ 	    }
  	    else if (f< l) {
- 	    	localStorage.hs51s = f;
+ 	    	localStorage.hs51 = f;
  	    }
 }
 
@@ -330,29 +341,45 @@ h = localStorage.hs2;
 j= localStorage.hs3;
 k=localStorage.hs4;
 l=localStorage.hs5;
-	if (f < g) {
+  if (localStorage.hs1 === undefined) {
+ 	    	localStorage.hs1 = f;
+ 	    }
+	else if (f < g) {
  	    	localStorage.hs2 = g;
  	    	localStorage.hs1 = f;
  	    	localStorage.hs3 = h;
  	    	localStorage.hs4 = j;
  	    	localStorage.hs5 = k;
  	    }
+ 	    else if (localStorage.hs2 === undefined) {
+ 	    	localStorage.hs2 = f;
+ 	    }
+
  	    else if (f<h) {
  	    	localStorage.hs2 = f;
  	    	localStorage.hs3 = h;
  	    	localStorage.hs4 = j;
  	    	localStorage.hs5 = k;
-
  	    }
+ 	    else if (localStorage.hs3 === undefined) {
+ 	    	localStorage.hs3 = f;
+ 	    }
+
  	    else if (f< j){
  	    	localStorage.hs3 = f;
  	    	localStorage.hs4 = j;
  	    	localStorage.hs5 = k;
 
  	    }
+ 	     else if (localStorage.hs4 === undefined) {
+ 	    	localStorage.hs4 = f;
+ 	    }
  	    else if (f< k){
  	    	localStorage.hs4 = f;
  	    	localStorage.hs5 = k;
+ 	    }
+ 	     else if (localStorage.hs5 === undefined) {
+ 	    	localStorage.hs5 = f;
  	    }
  	    else if (f< l) {
  	    	localStorage.hs5 = f;
