@@ -6,6 +6,7 @@ var boom = document.querySelector("#boom");
 var fade = document.querySelectorAll(".fade");
 var canvas = document.querySelector(".squares");
 var hs = document.querySelectorAll(".hs");
+localStorage.hs1 = "59:999"; 
 hs[1].textContent = localStorage.hs1;
 hs[2].textContent = localStorage.hs2;
 hs[3].textContent = localStorage.hs3;
