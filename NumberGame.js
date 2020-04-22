@@ -270,23 +270,28 @@ function stargame(){
 	for(var i = 0;i<25;i++){
 		squares[i].textContent = null;
 		squares[i].style.backgroundColor = null;
-		squares[i].style.color = "green";
+		squares[i].style.color = "red";
 	}
 	square.textContent = null;
 	square.classList.add("clicks");
 	square.classList.remove("clickss");
     w.start();
    Sound.play();
+	var brightss = 51;
   for (var i = 0; i<25; i++){
 	squares[i].textContent = num[i];
-	squares[i].style.backgroundColor = "black";
+	squares[i].style.backgroundColor = "maya blue";
 	squares[i].style.opacity = 1;
+	  squares[i].style.filter = "brightness(" + brightss + "%)";
+	  brightss += 1;
 };
 for (var i = 0; i<25 ; i++){
 	squares[i].addEventListener("click", function(){
 		if(Number(this.textContent) === d){
 			if(e<51){
 			this.textContent = e;
+			this.style.backgroundColor =  "black";
+			this.style.color = "green";
 			d++;
 			e++;}
 			else if(d<50){
