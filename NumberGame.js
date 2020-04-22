@@ -111,6 +111,9 @@ function startgame(){
         a = 1;
 	e = 0;
 	d = 0;
+	for(var i = 0;i<20;i++){
+		squares[i].style.color = "green";
+	}
 	for(var i = 20;i<25;i++){
 		squares[i].textContent = null;
 		squares[i].style.backgroundColor = null;
@@ -254,6 +257,7 @@ function stargame(){
 	for(var i = 0;i<25;i++){
 		squares[i].textContent = null;
 		squares[i].style.backgroundColor = null;
+		squares[i].style.color = "green";
 	}
 	square.textContent = null;
 	square.classList.add("clicks");
