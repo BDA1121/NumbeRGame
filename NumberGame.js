@@ -148,8 +148,8 @@ for (var i = 0; i<20 ; i++){
 			this.style.backgroundColor = "maya blue";
 			if(b<41){
 			this.textContent = b;
-		        cri = Number(squares[i].textContent)*(2); 
-	                dri = bright + cri;
+		         cri = Number(this.textContent)*(2); 
+	                 dri = bright + cri;
 	                this.style.filter = "brightness(" + dri + "%)";	
 			a++;
 			b++;}
