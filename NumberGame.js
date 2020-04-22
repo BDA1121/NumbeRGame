@@ -148,9 +148,9 @@ for (var i = 0; i<20 ; i++){
 			this.style.backgroundColor = "maya blue";
 			if(b<41){
 			this.textContent = b;
-		         cri = Number(this.textContent)*(2); 
-	                 dri = bright + cri;
-	                this.style.filter = "brightness(" + dri + "%)";	
+		         var cris = b*(2); 
+	                 var dris = bright + cri;
+	                this.style.filter = "brightness(" + dris + "%)";	
 			a++;
 			b++;}
 			else if(a<40){
@@ -281,12 +281,12 @@ function stargame(){
 	square.classList.remove("clickss");
     w.start();
    Sound.play();
-	var brightss = 50;
+	var brightss = 25;
   for (var i = 0; i<25; i++){
 	squares[i].textContent = num[i];
 	squares[i].style.backgroundColor = "maya blue";
 	squares[i].style.opacity = 1;
-	  var cric = Number(squares[i].textContent)*(1);
+	  var cric = Number(squares[i].textContent)*(1.5);
 	  var dric = cric + brightss; 
 	  squares[i].style.filter = "brightness(" + dric + "%)";
 };
@@ -295,8 +295,11 @@ for (var i = 0; i<25 ; i++){
 		if(Number(this.textContent) === d){
 			if(e<51){
 			this.textContent = e;
-			this.style.backgroundColor =  "black";
-			this.style.color = "green";
+			this.style.backgroundColor =  "maya blue";
+			this.style.color = "red";
+			var crics = e*(1.5);
+	                 var drics = crics + brightss; 
+	                 this.style.filter = "brightness(" + drics + "%)";
 			d++;
 			e++;}
 			else if(d<50){
