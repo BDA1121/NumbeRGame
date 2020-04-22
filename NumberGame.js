@@ -102,7 +102,15 @@ square.addEventListener("click",function(){
 	setTimeout(startgame,3000);
      
 });	};
+var b = 21;
+var a = 1;
+var e = 26;
+var d = 1;
 function startgame(){
+	b = 21;
+        a = 1;
+	e = 0;
+	d = 0;
 	for(var i = 20;i<25;i++){
 		squares[i].textContent = null;
 		squares[i].style.backgroundColor = null;
@@ -116,11 +124,8 @@ function startgame(){
 	squares[i].textContent = num[i];
 	squares[i].style.opacity = 1;
 };
-var b = 21;
-var a = 1;
 for (var i = 0; i<20 ; i++){
-	squares[i].addEventListener("click", function(){
-		 
+	squares[i].addEventListener("click", function(){	 
 		if(Number(this.textContent) === a){
 			this.style.color = "green";
 			this.style.backgroundColor = "black";
@@ -169,13 +174,13 @@ console.log(num);
 
 });
 function shuffle(array) {
-    var a = array.length;
+    var q = array.length;
     var t, i;
-    while (a > 0) {
-        i = Math.floor(Math.random() * a);
-        a--;
-        t = array[a];
-        array[a] = array[i];
+    while (q > 0) {
+        i = Math.floor(Math.random() * q);
+        q--;
+        t = array[q];
+        array[q] = array[i];
         array[i] = t;
     }
     return array;
@@ -242,7 +247,11 @@ function upd(){
 
 console.log(num);
 function stargame(){
-	for(var i = 20;i<25;i++){
+         a = 0;
+	 b = 0;
+	 d = 1;
+	e =26;
+	for(var i = 0;i<25;i++){
 		squares[i].textContent = null;
 		squares[i].style.backgroundColor = null;
 	}
@@ -256,8 +265,6 @@ function stargame(){
 	squares[i].style.backgroundColor = "black";
 	squares[i].style.opacity = 1;
 };
-  var e = 26;
-  var d = 1;
 for (var i = 0; i<25 ; i++){
 	squares[i].addEventListener("click", function(){
 		if(Number(this.textContent) === d){
