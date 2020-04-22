@@ -149,7 +149,7 @@ for (var i = 0; i<20 ; i++){
 			if(b<41){
 			this.textContent = b;
 		         var cris = b*(2); 
-	                 var dris = 20 + cris;
+	                 var dris = bright + cris;
 	                this.style.filter = "brightness(" + dris + "%)";	
 			a++;
 			b++;}
