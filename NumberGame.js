@@ -291,10 +291,11 @@ for (var i = 0; i<25 ; i++){
 			d++;
 			}
 			else {
-				this.style.color = "black";
+				this.style.opacity = 0;
 				str.textContent = "Game Over"; 
 				w.stop();
 				Sound.stop();
+				highsc1();
 			};
 		};
 	});};};
