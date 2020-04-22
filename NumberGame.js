@@ -137,7 +137,7 @@ for (var i = 0; i<20 ; i++){
 			a++;
 			b++;}
 			else if(a<40){
-			this.style.color = "black";
+			this.style.opacity = 0;
 			a++;
 			}
 			else {
@@ -277,7 +277,7 @@ for (var i = 0; i<25 ; i++){
 			d++;
 			e++;}
 			else if(d<50){
-			this.style.color = "black";
+			this.style.opacity = 0;
 			d++;
 			}
 			else {
