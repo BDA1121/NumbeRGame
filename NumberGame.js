@@ -284,7 +284,7 @@ function stargame(){
 	squares[i].style.backgroundColor = "maya blue";
 	squares[i].style.opacity = 1;
 	  var cric = Number(squares[i].textContent)*(1);
-	  var dric = cri + brightss; 
+	  var dric = cric + brightss; 
 	  squares[i].style.filter = "brightness(" + dric + "%)";
 };
 for (var i = 0; i<25 ; i++){
