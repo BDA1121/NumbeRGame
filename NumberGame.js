@@ -141,7 +141,7 @@ for (var i = 0; i<20 ; i++){
 			a++;
 			}
 			else {
-				this.style.color = "black";
+				this.style.opacity = 0;
 				str.textContent = "Game Over"; 
 				w.stop();
 				highsc();
