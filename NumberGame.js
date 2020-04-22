@@ -124,7 +124,7 @@ function startgame(){
 	for(var i = 0;i<20;i++){
 		squares[i].style.color = "red";
 	}
-	var bright = 50;
+	var bright = 20;
 	for(var i = 20;i<25;i++){
 		squares[i].textContent = null;
 		squares[i].style.backgroundColor = null;
@@ -137,17 +137,20 @@ function startgame(){
   for (var i = 0; i<20 ; i++){
 	squares[i].textContent = num[i];
 	squares[i].style.opacity = 1;
-	  var cri = Number(squares[i].textContent)*(1.25); 
+	  var cri = Number(squares[i].textContent)*(2); 
 	  var dri = bright + cri;
 	 squares[i].style.filter = "brightness(" + dri + "%)";
 };
 for (var i = 0; i<20 ; i++){
 	squares[i].addEventListener("click", function(){	 
 		if(Number(this.textContent) === a){
-			this.style.color = "green";
-			this.style.backgroundColor = "black";
+			this.style.color = "red";
+			this.style.backgroundColor = "maya blue";
 			if(b<41){
 			this.textContent = b;
+		        cri = Number(squares[i].textContent)*(2); 
+	                dri = bright + cri;
+	                this.style.filter = "brightness(" + dri + "%)";	
 			a++;
 			b++;}
 			else if(a<40){
