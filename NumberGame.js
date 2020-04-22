@@ -2,6 +2,7 @@ var num = [];
 var f;
 var g,h,j,k,l;
 var w = new sp();
+var hs = document.querySelectorAll(".hs");
 hs[7].textContent = localStorage.hs11;
 hs[8].textContent = localStorage.hs21;
 hs[9].textContent = localStorage.hs31;
@@ -16,7 +17,6 @@ var lvl = document.querySelector(".level");
 var boom = document.querySelector("#boom");
 var fade = document.querySelectorAll(".fade");
 var canvas = document.querySelector(".squares");
-var hs = document.querySelectorAll(".hs");
 var b1 = document.getElementById("b1");
 var b2 = document.getElementById("b2");
 b1.addEventListener("click", function(){
