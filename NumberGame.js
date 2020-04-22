@@ -137,7 +137,7 @@ function startgame(){
   for (var i = 0; i<20 ; i++){
 	squares[i].textContent = num[i];
 	squares[i].style.opacity = 1;
-	 squares[i].style.filter = "brightness(bright%)";
+	 squares[i].style.filter = "brightness(" + bright + "%)";
 	  bright += 2.5%;
 };
 for (var i = 0; i<20 ; i++){
