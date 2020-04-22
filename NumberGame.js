@@ -124,6 +124,7 @@ function startgame(){
 	for(var i = 0;i<20;i++){
 		squares[i].style.color = "green";
 	}
+	var bright = 2.5;
 	for(var i = 20;i<25;i++){
 		squares[i].textContent = null;
 		squares[i].style.backgroundColor = null;
@@ -136,6 +137,8 @@ function startgame(){
   for (var i = 0; i<20 ; i++){
 	squares[i].textContent = num[i];
 	squares[i].style.opacity = 1;
+	 squares[i].style.filter = "brightness(bright%)";
+	  bright += 2.5%;
 };
 for (var i = 0; i<20 ; i++){
 	squares[i].addEventListener("click", function(){	 
