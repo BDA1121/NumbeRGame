@@ -124,7 +124,7 @@ function startgame(){
 	for(var i = 0;i<20;i++){
 		squares[i].style.color = "red";
 	}
-	var bright = 51.25;
+	var bright = 50;
 	for(var i = 20;i<25;i++){
 		squares[i].textContent = null;
 		squares[i].style.backgroundColor = null;
@@ -137,8 +137,9 @@ function startgame(){
   for (var i = 0; i<20 ; i++){
 	squares[i].textContent = num[i];
 	squares[i].style.opacity = 1;
-	 squares[i].style.filter = "brightness(" + bright + "%)";
-	  bright += 1.25;
+	  var cri = Number(squares[i].textContent)*(1.25); 
+	  var dri = bright + cri;
+	 squares[i].style.filter = "brightness(" + dri + "%)";
 };
 for (var i = 0; i<20 ; i++){
 	squares[i].addEventListener("click", function(){	 
@@ -277,13 +278,14 @@ function stargame(){
 	square.classList.remove("clickss");
     w.start();
    Sound.play();
-	var brightss = 51;
+	var brightss = 50;
   for (var i = 0; i<25; i++){
 	squares[i].textContent = num[i];
 	squares[i].style.backgroundColor = "maya blue";
 	squares[i].style.opacity = 1;
-	  squares[i].style.filter = "brightness(" + brightss + "%)";
-	  brightss += 1;
+	  var cric = Number(squares[i].textContent)*(1);
+	  var dric = cri + brightss; 
+	  squares[i].style.filter = "brightness(" + dric + "%)";
 };
 for (var i = 0; i<25 ; i++){
 	squares[i].addEventListener("click", function(){
