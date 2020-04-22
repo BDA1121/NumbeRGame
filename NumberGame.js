@@ -122,9 +122,9 @@ function startgame(){
 	e = 0;
 	d = 0;
 	for(var i = 0;i<20;i++){
-		squares[i].style.color = "green";
+		squares[i].style.color = "red";
 	}
-	var bright = 2.5;
+	var bright = 51.25;
 	for(var i = 20;i<25;i++){
 		squares[i].textContent = null;
 		squares[i].style.backgroundColor = null;
@@ -138,7 +138,7 @@ function startgame(){
 	squares[i].textContent = num[i];
 	squares[i].style.opacity = 1;
 	 squares[i].style.filter = "brightness(" + bright + "%)";
-	  bright += 2.5;
+	  bright += 1.25;
 };
 for (var i = 0; i<20 ; i++){
 	squares[i].addEventListener("click", function(){	 
