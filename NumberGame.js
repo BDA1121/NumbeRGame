@@ -176,6 +176,7 @@ for (var i = 0; i<20 ; i++){
 
 b2.addEventListener("click", function(){
 	hi.style.display = "none";
+	canvas.style.display = "";
       lvl.textContent = "The Hard Level";
      square.classList.add("clicks");
 	square.textContent = "click to start";
