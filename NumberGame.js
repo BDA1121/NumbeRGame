@@ -21,7 +21,6 @@ var canvas = document.querySelector(".squares");
 var b1 = document.getElementById("b1");
 var b2 = document.getElementById("b2");
 var b3 = document.getElementById("b3");
-
 b1.addEventListener("click", function(){
       lvl.textContent = "The Easy Level";
       square.classList.add("clicks");
