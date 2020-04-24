@@ -485,12 +485,15 @@ moves(3);
       a[i] = -27*(i+1);
       if(i === 0){
         h[i+b*5].textContent = hs[b*3].textContent;
+	h[i+b*5].style.opacity = hs[b*3].style.opacity;
       }
       else if(i === 5){
         hs[b*3].textContent = h[4 + b*5].textContent;
+	hs[b*3].style.opacity = h[4 + b*5].style.opacity;
       }
       else {
       h[i+b*5].textContent = h[i+(b*5)-1].textContent;
+      h[i+b*5].style.opacity = h[i+(b*5)-1].style.opacity;
         }
     }
       } } 
@@ -505,11 +508,14 @@ moves(3);
       a[i] =  27*(5-i);
       if(i === 5){
        hs[b*3].textContent = h[b*5].textContent;
+       hs[b*3].style.opacity = h[b*5].style.opacity;
       }
       else if(i === 4){
         h[4+b*5].textContent = hs[b*3].textContent;
+	      h[4+b*5].style.opacity = hs[b*3].style.opacity;
       }
       else {
+      h[i+b*5].textContent = h[i+(b*5)+1].textContent;
       h[i+b*5].textContent = h[i+(b*5)+1].textContent;
       }                                                                                                                                       }
       }  
