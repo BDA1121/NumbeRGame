@@ -25,7 +25,7 @@ var b3 = document.getElementById("b3");
 b3.addEventListener("click", function(){
       lvl.textContent = "The Fun Level";
       //square.classList.add("clicks");
-	hi.style.display = "";
+	hi.style.display = "inline";
 	//square.textContent = "click to start";
 	canvas.style.display = "none";
 	time.style.background = 'linear-gradient(90deg, #f0027f, #75489f)';
@@ -38,7 +38,7 @@ b3.addEventListener("click", function(){
 	num = shuffle(num);
 });
 b1.addEventListener("click", function(){
-	canvas.style.display = "inline";
+	canvas.style.display = "";
 	hi.style.display = "none";
       lvl.textContent = "The Easy Level";
       square.classList.add("clicks");
