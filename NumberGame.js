@@ -32,7 +32,7 @@ b3.addEventListener("click", function(){
      for (var i = 0; i<20 ; i++){
 	num.push(i+1);
 };
-});
+};
 b1.addEventListener("click", function(){
       lvl.textContent = "The Easy Level";
       square.classList.add("clicks");
