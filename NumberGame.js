@@ -433,7 +433,7 @@ hs[4].textContent = localStorage.hs4;
 hs[5].textContent = localStorage.hs5;
 }
 b3.addEventListener("click", function(){
-	clearInterval(blah);
+	
       lvl.textContent = "The Fun Level";
       //square.classList.add("clicks");
 	hi.style.display = "";
@@ -472,7 +472,9 @@ moves(3);
     for(var i = 0; i<5;i++){
       h[i+b*5].style.left = a[i] + "px";
     };
+	
     var blah = setInterval(game,30);
+	    
      function game() {
       if(b%2 === 0){
       for (var i = 0; i < 6; i++) {
