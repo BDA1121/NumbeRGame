@@ -38,7 +38,7 @@ b3.addEventListener("click", function(){
 	num = shuffle(num);
 });
 b1.addEventListener("click", function(){
-	canvas.style.display = "";
+	canvas.style.display = "inline";
 	hi.style.display = "none";
       lvl.textContent = "The Easy Level";
       square.classList.add("clicks");
