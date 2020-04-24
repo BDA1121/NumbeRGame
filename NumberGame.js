@@ -23,21 +23,6 @@ var b1 = document.getElementById("b1");
 var b2 = document.getElementById("b2");
 var b3 = document.getElementById("b3");
 hi.style.display = "none";
-b3.addEventListener("click", function(){
-      lvl.textContent = "The Fun Level";
-      //square.classList.add("clicks");
-	hi.style.display = "";
-	//square.textContent = "click to start";
-	canvas.style.display = "none";
-	time.style.background = 'linear-gradient(90deg, #f0027f, #75489f)';
-	time.style.color = 'black';
-     w.reset();
-     num = [];
-     for (var i = 0; i<20 ; i++){
-	num.push(i+1);
-};
-	num = shuffle(num);
-});
 b1.addEventListener("click", function(){
 	canvas.style.display = "";
 	hi.style.display = "none";
@@ -446,3 +431,113 @@ hs[3].textContent = localStorage.hs3;
 hs[4].textContent = localStorage.hs4;
 hs[5].textContent = localStorage.hs5;
 }
+b3.addEventListener("click", function(){
+      lvl.textContent = "The Fun Level";
+      //square.classList.add("clicks");
+	hi.style.display = "";
+	//square.textContent = "click to start";
+	canvas.style.display = "none";
+	time.style.background = 'linear-gradient(90deg, #f0027f, #75489f)';
+	time.style.color = 'black';
+     w.reset();
+     num = [];
+     for (var i = 0; i<20 ; i++){
+	num.push(i+1);
+};
+	num = shuffle(num);
+	var u = 1;
+var o = 21 
+var hs = document.querySelectorAll(".hse");  
+var h = document.querySelectorAll(".he");  
+
+for (var i = 0; i < 20; i++) {
+  h[i].textContent = num[i];
+}
+
+hs[0].textContent = h[4].textContent;
+hs[6].textContent = h[14].textContent;
+  //startgame();   
+
+    moves(0);
+  moves(1);
+moves(2);
+moves(3);
+    function moves(b){
+    var a = [0,0,0,0,0,-162,-189,-54];
+    for(var i = 0; i<3;i++){
+      hs[i+b*3].style.left = a[i+5] + "px";
+    };
+    for(var i = 0; i<5;i++){
+      h[i+b*5].style.left = a[i] + "px";
+    };
+     setInterval(game,30);
+     function game() {
+      if(b%2 === 0){
+      for (var i = 0; i < 6; i++) {
+        if (a[i] < 27*(5-i)) {
+          a[i] += 1;
+          if(i<5){ h[i+b*5].style.left = a[i] + "px" ;
+        }
+     else {
+    hs[b*3].style.left = a[5] + "px";
+          }   }
+    else {
+      a[i] = -27*(i+1);
+      if(i === 0){
+        h[i+b*5].textContent = hs[b*3].textContent;
+      }
+      else if(i === 5){
+        hs[b*3].textContent = h[4 + b*5].textContent;
+      }
+      else {
+      h[i+b*5].textContent = h[i+(b*5)-1].textContent;
+        }
+    }
+      } } 
+     else {
+        for (var i = 0; i < 6; i++) {
+        if (a[i] > -27*(i+1)) {
+          a[i]-= 1;
+          if (i<5) { h[i+b*5].style.left = a[i] + "px" ;}
+          else{hs[b*3].style.left = a[5] + "px";}
+    }
+    else {
+      a[i] =  27*(5-i);
+      if(i === 5){
+       hs[b*3].textContent = h[b*5].textContent;
+      }
+      else if(i === 4){
+        h[4+b*5].textContent = hs[b*3].textContent;
+      }
+      else {
+      h[i+b*5].textContent = h[i+(b*5)+1].textContent;
+      }                                                                                                                                       }
+      }  
+     }
+  startsgame();
+}}
+
+function startsgame(){
+	w.start();
+   Sound.play();
+  for (var i = 0; i < 20; i++) {
+    h[i].addEventListener("click", function(){
+      if(Number(this.textContent) === u){
+     if (o<41) {
+      this.textContent = o;
+      o++;
+      u++;
+}
+    else if(u<40){
+    this.style.color = "black";
+	    this.style.opacity = 0;
+    u++; 
+    }
+	      else{
+	      str.textContent = "Game Over"; 
+				w.stop();
+				Sound.stop();
+	      }
+   } });
+ };;}
+});
