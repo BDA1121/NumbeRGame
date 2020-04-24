@@ -22,10 +22,12 @@ var canvas = document.querySelector(".squares");
 var b1 = document.getElementById("b1");
 var b2 = document.getElementById("b2");
 var b3 = document.getElementById("b3");
+hi.style.display = "none";
 b3.addEventListener("click", function(){
       lvl.textContent = "The Fun Level";
       //square.classList.add("clicks");
-	hi.style.display = "inline";
+	hi.style.display = "";
+	hi.style.visibility = "visible";
 	//square.textContent = "click to start";
 	canvas.style.display = "none";
 	time.style.background = 'linear-gradient(90deg, #f0027f, #75489f)';
