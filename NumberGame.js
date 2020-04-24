@@ -1,6 +1,6 @@
 var num = [];
 var f;
-var time = documents.quesrySelector(".time");
+var time = document.quesrySelector(".time");
 var g,h,j,k,l;
 var w = new sp();
 var hs = document.querySelectorAll(".hs");
