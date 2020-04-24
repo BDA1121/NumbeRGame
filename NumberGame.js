@@ -471,7 +471,7 @@ moves(3);
     for(var i = 0; i<5;i++){
       h[i+b*5].style.left = a[i] + "px";
     };
-     setInterval(game,30);
+    var blah = setInterval(game,30);
      function game() {
       if(b%2 === 0){
       for (var i = 0; i < 6; i++) {
@@ -545,7 +545,7 @@ function startsgame(){
 	      str.textContent = "Game Over"; 
 		w.stop();
 		Sound.stop();
-		      clearInterval(game)
+		      clearInterval(blah)
 	      }
    } });
  };;}
