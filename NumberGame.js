@@ -509,7 +509,7 @@ moves(3);
       a[i] =  27*(5-i);
       if(i === 5){
        hs[b*3].textContent = h[b*5].textContent;
-       hs[b*3].style.opacity = h[b*5].style.opacityt;
+       hs[b*3].style.opacity = h[b*5].style.opacity;
       }
       else if(i === 4){
         h[4+b*5].textContent = hs[b*3].textContent;
