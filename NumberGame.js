@@ -516,9 +516,9 @@ moves(3);
       }                                                                                                                                       }
       }  
      }
-  startsgame();
-}}
 
+}}
+startsgame();
 function startsgame(){
 	w.start();
    Sound.play();
@@ -532,14 +532,15 @@ function startsgame(){
 }
     else if(u<40){
     this.style.color = "black";
-	    this.textContent = 0;
+	    this.textContent = "null";
     u++; 
     }
 	      else{
-		      this.textContent = 0;
+		      this.textContent = "null";
 	      str.textContent = "Game Over"; 
-				w.stop();
-				Sound.stop();
+		w.stop();
+		Sound.stop();
+		      clearInterval(game)
 	      }
    } });
  };;}
