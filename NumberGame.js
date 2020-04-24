@@ -1,5 +1,6 @@
 var num = [];
 var f;
+var time = documents.quesrySelector(".time");
 var g,h,j,k,l;
 var w = new sp();
 var hs = document.querySelectorAll(".hs");
@@ -19,6 +20,18 @@ var fade = document.querySelectorAll(".fade");
 var canvas = document.querySelector(".squares");
 var b1 = document.getElementById("b1");
 var b2 = document.getElementById("b2");
+var b3 = document.getElementById("b3");
+b3.addEventListener("click", function(){
+      lvl.textContent = "The Fun Level";
+      square.classList.add("clicks");
+	square.textContent = "click to start";
+	time.style.background = 'linear-gradient(90deg, #f0027f, #75489f)';
+	time.style.color = 'black';
+     w.reset();
+     num = [];
+     for (var i = 0; i<20 ; i++){
+	num.push(i+1);
+};
 b1.addEventListener("click", function(){
       lvl.textContent = "The Easy Level";
       square.classList.add("clicks");
