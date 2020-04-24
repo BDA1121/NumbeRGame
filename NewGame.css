@@ -14,6 +14,14 @@ body {
 	color: green;	
 
 }
+.hi{ position: absolute; top: 20%;left: 34.3% ; margin: 0 auto; width: 230px; height: 108px;
+padding-left: 95px; padding-top: px; padding-bottom: 19px; border: px solid
+black;display : none; }
+ .he,.hse{ position: relative; width: 25px; line-height:30px ; text-align: center; float:
+left; left: 0px; margin: 1px; background:  rgb(115, 194, 251); color: black; } 
+#hse{
+background-color: #808088; color: #808088;  } #hsse{ background-color: #808088; color:
+#808088; }
 .hs{
 	opacity: 0;
         display: none;
