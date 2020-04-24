@@ -532,11 +532,11 @@ function startsgame(){
 }
     else if(u<40){
     this.style.color = "black";
-	    this.textContent = "null";
+	    this.textContent = null;
     u++; 
     }
 	      else{
-		      this.textContent = "null";
+		      this.textContent = null;
 	      str.textContent = "Game Over"; 
 		w.stop();
 		Sound.stop();
