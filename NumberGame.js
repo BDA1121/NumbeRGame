@@ -433,6 +433,7 @@ hs[4].textContent = localStorage.hs4;
 hs[5].textContent = localStorage.hs5;
 }
 b3.addEventListener("click", function(){
+	clearInterval(blah);
       lvl.textContent = "The Fun Level";
       //square.classList.add("clicks");
 	hi.style.display = "";
@@ -545,7 +546,7 @@ function startsgame(){
 	      str.textContent = "Game Over"; 
 		w.stop();
 		Sound.stop();
-		      clearInterval(blah)
+		      clearInterval(blah);
 	      }
    } });
  };;}
