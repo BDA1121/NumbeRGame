@@ -27,7 +27,6 @@ b3.addEventListener("click", function(){
       lvl.textContent = "The Fun Level";
       //square.classList.add("clicks");
 	hi.style.display = "";
-	hi.style.visibility = "visible";
 	//square.textContent = "click to start";
 	canvas.style.display = "none";
 	time.style.background = 'linear-gradient(90deg, #f0027f, #75489f)';
