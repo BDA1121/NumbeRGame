@@ -3,6 +3,7 @@ var f;
 var time = document.querySelector(".time");
 var g,h,j,k,l;
 var w = new sp();
+var hi = document.querySelector(".hi")
 var hs = document.querySelectorAll(".hs");
 hs[7].textContent = localStorage.hs11;
 hs[8].textContent = localStorage.hs21;
@@ -23,8 +24,9 @@ var b2 = document.getElementById("b2");
 var b3 = document.getElementById("b3");
 b3.addEventListener("click", function(){
       lvl.textContent = "The Fun Level";
-      square.classList.add("clicks");
-	square.textContent = "click to start";
+      //square.classList.add("clicks");
+	hi.style.display = "";
+	//square.textContent = "click to start";
 	canvas.style.display = "none";
 	time.style.background = 'linear-gradient(90deg, #f0027f, #75489f)';
 	time.style.color = 'black';
@@ -33,9 +35,11 @@ b3.addEventListener("click", function(){
      for (var i = 0; i<20 ; i++){
 	num.push(i+1);
 };
+	num = shuffle(num);
 });
 b1.addEventListener("click", function(){
 	canvas.style.display = "";
+	hi.style.display = "none";
       lvl.textContent = "The Easy Level";
       square.classList.add("clicks");
 	square.textContent = "click to start";
@@ -89,6 +93,7 @@ function sound(src) {
 }
 
 newg.addEventListener("click", function(){
+	hi.style.display = "none";
 	square.classList.add("clicks");
 	square.textContent = "click to start";
 	canvas.style.height = "220px";
@@ -184,6 +189,7 @@ for (var i = 0; i<20 ; i++){
 	});};};
 
 b2.addEventListener("click", function(){
+	hi.style.display = "none";
       lvl.textContent = "The Hard Level";
      square.classList.add("clicks");
 	square.textContent = "click to start";
