@@ -459,7 +459,8 @@ for (var i = 0; i < 20; i++) {
 hs[0].textContent = h[4].textContent;
 hs[6].textContent = h[14].textContent;
   //startgame();   
-
+var blah;
+	clearInterval(blah);
     moves(0);
   moves(1);
 moves(2);
@@ -472,9 +473,9 @@ moves(3);
     for(var i = 0; i<5;i++){
       h[i+b*5].style.left = a[i] + "px";
     };
-	
-    var blah = setInterval(game,30);
-	    
+    
+    blah = setInterval(game,30);
+	   
      function game() {
       if(b%2 === 0){
       for (var i = 0; i < 6; i++) {
