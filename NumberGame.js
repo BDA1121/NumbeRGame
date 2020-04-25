@@ -31,7 +31,7 @@ b1.addEventListener("click", function(){
       hse[i*3].textContent = null;
     };
 	for (var i = 0; i < 20; i++){
-  he[i].style.left = 0 + "px";
+  he[i].style.left = 225 + "px";
   he[i].textContent = null;
 }
 	canvas.style.display = "";
