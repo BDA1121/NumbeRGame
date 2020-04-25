@@ -3,6 +3,8 @@ var f;
 var time = document.querySelector(".time");
 var g,h,j,k,l;
 var w = new sp();
+var hse = document.querySelectorAll(".hse");  
+var he = document.querySelectorAll(".he"); 
 var hi = document.querySelector(".hi")
 var hs = document.querySelectorAll(".hs");
 hs[7].textContent = localStorage.hs11;
@@ -24,6 +26,14 @@ var b2 = document.getElementById("b2");
 var b3 = document.getElementById("b3");
 hi.style.display = "none";
 b1.addEventListener("click", function(){
+	for(var i = 0; i<3;i++){
+      hse[i*3].style.left = 0 + "px";
+      hse[i*3].textContent = null;
+    };
+	for (var i = 0; i < 20; i++){
+  he[i].style.left = 0 + "px";
+  he[i].textContent = null;
+}
 	canvas.style.display = "";
 	hi.style.display = "none";
       lvl.textContent = "The Easy Level";
@@ -79,6 +89,14 @@ function sound(src) {
 }
 
 newg.addEventListener("click", function(){
+	for(var i = 0; i<3;i++){
+      hse[i*3].style.left = 0 + "px";
+      hse[i*3].textContent = null;
+    };
+	for (var i = 0; i < 20; i++){
+  he[i].style.left = 0 + "px";
+  he[i].textContent = null;
+}
 	canvas.style.display = "";
 	hi.style.display = "none";
 	square.classList.add("clicks");
@@ -176,6 +194,14 @@ for (var i = 0; i<20 ; i++){
 	});};};
 
 b2.addEventListener("click", function(){
+	for(var i = 0; i<3;i++){
+      hse[i*3].style.left = 0 + "px";
+      hse[i*3].textContent = null;
+    };
+	for (var i = 0; i < 20; i++){
+  he[i].style.left = 0 + "px";
+  he[i].textContent = null;
+}
 	hi.style.display = "none";
 	canvas.style.display = "";
       lvl.textContent = "The Hard Level";
@@ -449,16 +475,12 @@ b3.addEventListener("click", function(){
 };
 	num = shuffle(num);
 	var u = 1;
-var o = 21 
-var hs = document.querySelectorAll(".hse");  
-var h = document.querySelectorAll(".he");  
-
+var o = 21  ;
 for (var i = 0; i < 20; i++) {
-  h[i].textContent = num[i];
+  he[i].textContent = num[i];
 }
-
-hs[0].textContent = h[4].textContent;
-hs[6].textContent = h[14].textContent;
+hse[0].textContent = he[4].textContent;
+hse[6].textContent = he[14].textContent;
   //startgame();   
 var blah;
 	clearInterval(blah);
@@ -469,10 +491,10 @@ moves(3);
     function moves(b){
     var a = [0,0,0,0,0,-162,-189,-54];
     for(var i = 0; i<3;i++){
-      hs[i+b*3].style.left = a[i+5] + "px";
+      hse[i+b*3].style.left = a[i+5] + "px";
     };
     for(var i = 0; i<5;i++){
-      h[i+b*5].style.left = a[i] + "px";
+      he[i+b*5].style.left = a[i] + "px";
     };
     
     blah = setInterval(game,30);
@@ -482,38 +504,38 @@ moves(3);
       for (var i = 0; i < 6; i++) {
         if (a[i] < 27*(5-i)-20) {
           a[i] += 1;
-          if(i<5){ h[i+b*5].style.left = a[i] + "px" ;
+          if(i<5){ he[i+b*5].style.left = a[i] + "px" ;
         }
      else {
-    hs[b*3].style.left = a[5] + "px";
+    hse[b*3].style.left = a[5] + "px";
           }   }
 	     else if((a[i] >= 27*(5-i)-27 )&&(a[i] < 27*(5-i)) ){
            a[i] += 1;
-          if(i<5){ h[i+b*5].style.left = a[i] + "px" ;
+          if(i<5){ he[i+b*5].style.left = a[i] + "px" ;
             if (i<4) {
-           h[i+b*5+1].textContent = h[i+(b*5)].textContent;}
+           he[i+b*5+1].textContent = he[i+(b*5)].textContent;}
            else{
-            hs[b*3].textContent = h[i+b*5].textContent;
+            hse[b*3].textContent = he[i+b*5].textContent;
            }  
         }
      else {
-    hs[b*3].style.left = a[5] + "px";
-          h[ b*5].textContent = hs[b*3].textContent;
+    hse[b*3].style.left = a[5] + "px";
+          he[ b*5].textContent = hse[b*3].textContent;
           }    
      }
     else {
       a[i] = -27*(i+1);
       if(i === 0){
-        h[i+b*5].textContent = hs[b*3].textContent;
-        h[i+b*5].style.opacity = hs[b*3].style.opacity;
+        he[i+b*5].textContent = hse[b*3].textContent;
+        he[i+b*5].style.opacity = hse[b*3].style.opacity;
       }
       else if(i === 5){
-        hs[b*3].textContent = h[4 + b*5].textContent;
-        hs[b*3].style.opacity = h[4 + b*5].style.opacity;
+        hse[b*3].textContent = he[4 + b*5].textContent;
+        hse[b*3].style.opacity = he[4 + b*5].style.opacity;
       }
       else {
-      h[i+b*5].textContent = h[i+(b*5)-1].textContent;
-      h[i+b*5].style.opacity = h[i+(b*5)-1].style.opacity;  
+      he[i+b*5].textContent = he[i+(b*5)-1].textContent;
+      he[i+b*5].style.opacity = he[i+(b*5)-1].style.opacity;  
       }
     }
       } } 
@@ -521,37 +543,37 @@ moves(3);
         for (var i = 0; i < 6; i++) {
         if (a[i] > -27*(i+1)) {
           a[i]-= 1;
-          if (i<5) { h[i+b*5].style.left = a[i] + "px" ;}
-          else{hs[b*3].style.left = a[5] + "px";}
+          if (i<5) { he[i+b*5].style.left = a[i] + "px" ;}
+          else{hse[b*3].style.left = a[5] + "px";}
     }
 		else if ((a[i] <= -27*(i+1) +27) && (a[i] > -27*(i+1)) ) {
           console.log("1")
           a[i]-= 1;
-          if (i<5) { h[i+b*5].style.left = a[i] + "px" ;
+          if (i<5) { he[i+b*5].style.left = a[i] + "px" ;
             if(i>0){
-               h[i+(b*5)-1].textContent = h[i+(b*5)].textContent;
+               he[i+(b*5)-1].textContent = he[i+(b*5)].textContent;
             }
             else{
-              hs[b*3].textContent = h[b*5].textContent;
+              hse[b*3].textContent = he[b*5].textContent;
             }
         }
-          else{hs[b*3].style.left = a[5] + "px";
-          h[4+b*5].textContent = hs[b*3].textContent;
+          else{hse[b*3].style.left = a[5] + "px";
+          he[4+b*5].textContent = hse[b*3].textContent;
         }
     }
     else {
       a[i] =  27*(5-i);
       if(i === 5){
-       hs[b*3].textContent = h[b*5].textContent;
-       hs[b*3].style.opacity = h[b*5].style.opacity;
+       hse[b*3].textContent = he[b*5].textContent;
+       hse[b*3].style.opacity = he[b*5].style.opacity;
       }
       else if(i === 4){
-        h[4+b*5].textContent = hs[b*3].textContent;
-        h[4+b*5].style.opacity = hs[b*3].style.opacity;
+        he[4+b*5].textContent = hse[b*3].textContent;
+        he[4+b*5].style.opacity = hse[b*3].style.opacity;
       }
       else {
-      h[i+b*5].textContent = h[i+(b*5)+1].textContent;
-      h[i+b*5].style.opacity = h[i+(b*5)+1].style.opacity;
+      he[i+b*5].textContent = he[i+(b*5)+1].textContent;
+      he[i+b*5].style.opacity = he[i+(b*5)+1].style.opacity;
       }                                                                                                                                       }
       }  
      }
@@ -562,7 +584,7 @@ function startsgame(){
 	w.start();
    Sound.play();
   for (var i = 0; i < 20; i++) {
-    h[i].addEventListener("click", function(){
+    he[i].addEventListener("click", function(){
       if(Number(this.textContent) === u){
      if (o<41) {
       this.textContent = o;
@@ -580,6 +602,14 @@ function startsgame(){
 		w.stop();
 		Sound.stop();
 		      clearInterval(blah);
+		      for(var i = 0; i<3;i++){
+      hse[i*3].style.left = 0 + "px";
+      hse[i*3].textContent = null;
+    };
+	for (var i = 0; i < 20; i++){
+  he[i].style.left = 0 + "px";
+  he[i].textContent = null;
+}
 	      }
    } });
  };;}
