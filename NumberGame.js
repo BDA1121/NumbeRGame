@@ -478,13 +478,27 @@ moves(3);
      function game() {
       if(b%2 === 0){
       for (var i = 0; i < 6; i++) {
-        if (a[i] < 27*(5-i)) {
+        if (a[i] < 27*(5-i)-20) {
           a[i] += 1;
           if(i<5){ h[i+b*5].style.left = a[i] + "px" ;
         }
      else {
     hs[b*3].style.left = a[5] + "px";
           }   }
+	      else if((a[i] >= 27*(5-i)-20 )&&(a[i] < 27*(5-i)) ){
+           a[i] += 1;
+          if(i<5){ h[i+b*5].style.left = a[i] + "px" ;
+            if (i<4) {
+           h[i+b*5+1].textContent = h[i+(b*5)].textContent;}
+           else{
+            h[i+b*5].textContent = hs[b*3].textContent;
+           }  
+        }
+     else {
+    hs[b*3].style.left = a[5] + "px";
+          hs[b*3].textContent = h[ b*5].textContent
+          }    
+     }
     else {
       a[i] = -27*(i+1);
       if(i === 0){
