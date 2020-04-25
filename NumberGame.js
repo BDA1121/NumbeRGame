@@ -27,7 +27,7 @@ var b3 = document.getElementById("b3");
 hi.style.display = "none";
 b1.addEventListener("click", function(){
 	for(var i = 0; i<3;i++){
-      hse[i*3].style.left = 0 + "px";
+      hse[i*3].style.left = 225 + "px";
       hse[i*3].textContent = null;
     };
 	for (var i = 0; i < 20; i++){
