@@ -79,6 +79,7 @@ function sound(src) {
 }
 
 newg.addEventListener("click", function(){
+	canvas.style.display = "";
 	hi.style.display = "none";
 	square.classList.add("clicks");
 	square.textContent = "click to start";
